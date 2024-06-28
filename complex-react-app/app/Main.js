@@ -10,24 +10,29 @@ import About from "./components/About.js";
 import Terms from "./components/Terms.js";
 
 function Main() {
-  return (
-    <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<HomeGuest />} />
-        <Route path="/about-us" element={<About />} />
-        <Route path="/terms" element={<Terms />} />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
-  );
+	return (
+		<BrowserRouter>
+			<Header />
+			<Routes>
+				<Route path="/" element={<HomeGuest />} />
+				<Route path="/about-us" element={<About />} />
+				<Route path="/terms" element={<Terms />} />
+			</Routes>
+			<Footer />
+		</BrowserRouter>
+	);
 }
 
 const root = ReactDOM.createRoot(document.querySelector("#app"));
 root.render(<Main />);
 
 if (module.hot) {
-  module.hot.accept();
+	module.hot.accept();
 }
 // npm run dev
-// Ctr+C to stop
+// ctr+C to stop
+
+// Backend:
+// In terminal for backend-api folder
+// npm run start
+// ctrl+c then y to stop
